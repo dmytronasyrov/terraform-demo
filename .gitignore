@@ -34,3 +34,4 @@ override.tf.json
 
 demo_access_key
 demo_access_key.pub
+private_ips
