@@ -1,6 +1,6 @@
 resource "aws_security_group" "allow-ssh" {
   name = "allow-ssh"
-  description = "SG that allows SSH and all egress traffic"
+  description = "SG that allows SSH for my IP and all for all egress traffic"
   vpc_id = "${aws_vpc.main.id}"
 
   egress {
