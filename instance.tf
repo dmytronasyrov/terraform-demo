@@ -16,14 +16,14 @@ resource "aws_instance" "example" {
   }
 
   provisioner "file" {
-    source      = "script.sh"
-    destination = "/tmp/script.sh"
+    source      = "scripts/script-nginx.sh"
+    destination = "/tmp/script-nginx.sh"
   }
 
   provisioner "remote-exec" {
     inline = [
-      "chmod +x /tmp/script.sh",
-      "sudo /tmp/script.sh",
+      "chmod +x /tmp/script-nginx.sh",
+      "sudo /tmp/script-nginx.sh",
     ]
   }
 
