@@ -16,13 +16,17 @@ variable "AMIS" {
 }
 
 variable "PATH_TO_PRIV_KEY" {
-  default = "demo_access_key"
+  default = "keys/demo_access_key"
 }
 
 variable "PATH_TO_PUB_KEY" {
-  default = "demo_access_key.pub"
+  default = "keys/demo_access_key.pub"
 }
 
 variable "INSTANCE_USERNAME" {
   default = "ubuntu"
+}
+
+variable "INSTANCE_DEVICE_NAME" {
+  default = "/dev/xvdh"
 }
