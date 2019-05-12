@@ -11,6 +11,8 @@ resource "aws_instance" "example" {
 
   key_name = "${aws_key_pair.access_key.key_name}"
 
+  iam_instance_profile = "${aws_iam_instance_profile.s3-mybucket-role-instanceprofile.name}"
+
   provisioner "local-exec" {
     command = "echo ${aws_instance.example.private_ip} >> private_ips"
   }
