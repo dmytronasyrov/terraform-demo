@@ -34,6 +34,8 @@ resource "aws_instance" "example" {
     private_key = "${file("${var.PATH_TO_PRIV_KEY}")}"
     timeout     = "10m"
   }
+
+  user_data = "${data.template_cloudinit_config.cloudinit-example.rendered}"
 }
 
 output "ip" {
